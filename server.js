@@ -10,6 +10,12 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Test route (for browser check)
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running successfully!");
+});
+
+
 // MongoDB Atlas connection
 mongoose.connect("mongodb+srv://garvmobile4873:xcKetB5QuoZxEBMl@cluster0new.v09ug41.mongodb.net/")
     
